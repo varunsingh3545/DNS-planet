@@ -38,17 +38,23 @@ export function Navigation() {
   return (
     <motion.nav
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 445ae4d (Refine visual elements and styles across various website components)
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         scrolled ? 'glass-morphism-bright backdrop-blur-xl shadow-lg shadow-black/20' : 'bg-transparent'
+<<<<<<< HEAD
 =======
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled ? 'glass-morphism backdrop-blur-xl' : 'bg-transparent'
 >>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
+=======
+>>>>>>> 445ae4d (Refine visual elements and styles across various website components)
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,6 +62,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/">
             <motion.div 
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="flex items-center space-x-3 cursor-pointer group"
               whileHover={{ scale: 1.05 }}
@@ -70,13 +77,24 @@ export function Navigation() {
               <span className="text-xl font-bold gradient-text text-glow-subtle">DNS Planet</span>
 =======
               className="flex items-center space-x-2 cursor-pointer group"
+=======
+              className="flex items-center space-x-3 cursor-pointer group"
+>>>>>>> 445ae4d (Refine visual elements and styles across various website components)
               whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
             >
-              <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[hsl(var(--eco-green))] to-[hsl(var(--neon-blue))] flex items-center justify-center">
-                <Globe className="w-5 h-5 text-black" />
+              <div className="relative">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[hsl(var(--eco-green))] to-[hsl(var(--neon-blue))] flex items-center justify-center group-hover:shadow-lg group-hover:shadow-[hsl(var(--eco-green))]/30 transition-all duration-300">
+                  <Globe className="w-5 h-5 text-black animate-breathe" />
+                </div>
+                <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-[hsl(var(--eco-green))] to-[hsl(var(--neon-blue))] opacity-20 group-hover:opacity-40 transition-opacity duration-300 animate-pulse"></div>
               </div>
+<<<<<<< HEAD
               <span className="text-xl font-bold gradient-text">DNS Planet</span>
 >>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
+=======
+              <span className="text-xl font-bold gradient-text text-glow-subtle">DNS Planet</span>
+>>>>>>> 445ae4d (Refine visual elements and styles across various website components)
             </motion.div>
           </Link>
 
@@ -86,6 +104,7 @@ export function Navigation() {
               <motion.button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className="relative text-gray-300 hover:text-[hsl(var(--eco-green))] transition-all duration-300 font-medium px-3 py-2 rounded-lg hover:bg-white/5"
                 whileHover={{ scale: 1.05, y: -2 }}
@@ -104,6 +123,18 @@ export function Navigation() {
               >
                 {item.label}
 >>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
+=======
+                className="relative text-gray-300 hover:text-[hsl(var(--eco-green))] transition-all duration-300 font-medium px-3 py-2 rounded-lg hover:bg-white/5"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="relative z-10">{item.label}</span>
+                <motion.div
+                  className="absolute inset-0 rounded-lg bg-gradient-to-r from-[hsl(var(--eco-green))]/10 to-[hsl(var(--neon-blue))]/10 opacity-0"
+                  whileHover={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+>>>>>>> 445ae4d (Refine visual elements and styles across various website components)
               </motion.button>
             ))}
           </div>

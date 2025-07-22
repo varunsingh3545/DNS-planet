@@ -52,6 +52,7 @@ export function Dashboard() {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const stats = (data as any)?.stats || {};
   const alerts = (alertsData.data as any)?.alerts || [];
   const recentSensorData = (sensorData as any)?.data || [];
@@ -60,6 +61,11 @@ export function Dashboard() {
   const alerts = alertsData?.alerts || [];
   const recentSensorData = sensorData?.data || [];
 >>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
+=======
+  const stats = (data as any)?.stats || {};
+  const alerts = (alertsData.data as any)?.alerts || [];
+  const recentSensorData = (sensorData as any)?.data || [];
+>>>>>>> 445ae4d (Refine visual elements and styles across various website components)
 
   // Mock chart data for temperature trends
   const temperatureData = [
@@ -282,10 +288,14 @@ export function Dashboard() {
               
               <div className="space-y-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {alerts.slice(0, 3).map((alert: any, index: number) => (
 =======
                 {alerts.slice(0, 3).map((alert, index) => (
 >>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
+=======
+                {alerts.slice(0, 3).map((alert: any, index: number) => (
+>>>>>>> 445ae4d (Refine visual elements and styles across various website components)
                   <motion.div
                     key={alert.id}
                     className={`bg-[hsl(var(--${alert.severity === 'high' || alert.severity === 'critical' ? 'infrared-orange' : 'neon-blue'})]/10 border border-[hsl(var(--${alert.severity === 'high' || alert.severity === 'critical' ? 'infrared-orange' : 'neon-blue'})]/30 rounded-lg p-4`}

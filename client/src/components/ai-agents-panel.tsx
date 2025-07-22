@@ -49,10 +49,14 @@ export function AIAgentsPanel() {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const agents = (data as any)?.agents || [];
 =======
   const agents = data?.agents || [];
 >>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
+=======
+  const agents = (data as any)?.agents || [];
+>>>>>>> 445ae4d (Refine visual elements and styles across various website components)
 
   return (
     <section id="ai-agents" className="py-20 bg-gradient-to-b from-[hsl(var(--space-black))] to-[hsl(var(--space-dark))]">
@@ -74,10 +78,14 @@ export function AIAgentsPanel() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
           {agents.map((agent: any, index: number) => {
 =======
           {agents.map((agent, index) => {
 >>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
+=======
+          {agents.map((agent: any, index: number) => {
+>>>>>>> 445ae4d (Refine visual elements and styles across various website components)
             const Icon = agentIcons[agent.id as keyof typeof agentIcons];
             const color = agentColors[agent.id as keyof typeof agentColors];
             
@@ -85,15 +93,20 @@ export function AIAgentsPanel() {
               <motion.div
                 key={agent.id}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className="group glass-morphism-bright rounded-2xl p-6 card-hover-effect cursor-pointer shimmer-border"
 =======
                 className="group glass-morphism rounded-2xl p-6 hover:bg-white/10 transition-all duration-500 cursor-pointer"
 >>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
+=======
+                className="group glass-morphism-bright rounded-2xl p-6 card-hover-effect cursor-pointer shimmer-border"
+>>>>>>> 445ae4d (Refine visual elements and styles across various website components)
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ 
+<<<<<<< HEAD
 <<<<<<< HEAD
                   scale: 1.03,
                   y: -8,
@@ -103,6 +116,11 @@ export function AIAgentsPanel() {
                   y: -5,
                   boxShadow: `0 20px 40px hsla(var(--${color}), 0.3)`
 >>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
+=======
+                  scale: 1.03,
+                  y: -8,
+                  rotateY: 5
+>>>>>>> 445ae4d (Refine visual elements and styles across various website components)
                 }}
               >
                 <div className="flex items-center mb-4">

@@ -117,15 +117,21 @@ export function EarthGlobe() {
           <motion.div
             key={index}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 445ae4d (Refine visual elements and styles across various website components)
             className="absolute glass-morphism rounded-lg p-3 cursor-pointer hover:bg-white/20 transition-all duration-300 animate-float"
             style={{ 
               ...card.position,
               animationDelay: `${card.delay}s`
             }}
+<<<<<<< HEAD
 =======
             className="absolute glass-morphism rounded-lg p-3 cursor-pointer hover:bg-white/20 transition-all duration-300"
             style={card.position}
 >>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
+=======
+>>>>>>> 445ae4d (Refine visual elements and styles across various website components)
             initial={{ opacity: 0, y: 20 }}
             animate={{ 
               opacity: 1, 
@@ -141,9 +147,12 @@ export function EarthGlobe() {
               boxShadow: `0 10px 30px hsla(var(--${card.color}), 0.3)`
             }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             className={`animate-float ${index === 0 ? '' : index === 1 ? 'animation-delay-1000' : 'animation-delay-2000'}`}
 >>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
+=======
+>>>>>>> 445ae4d (Refine visual elements and styles across various website components)
           >
             <div className={`text-[hsl(var(--${card.color}))] text-sm font-semibold`}>
               {card.title}
