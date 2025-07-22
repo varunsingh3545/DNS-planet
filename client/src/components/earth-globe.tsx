@@ -116,11 +116,16 @@ export function EarthGlobe() {
         {floatingCards.map((card, index) => (
           <motion.div
             key={index}
+<<<<<<< HEAD
             className="absolute glass-morphism rounded-lg p-3 cursor-pointer hover:bg-white/20 transition-all duration-300 animate-float"
             style={{ 
               ...card.position,
               animationDelay: `${card.delay}s`
             }}
+=======
+            className="absolute glass-morphism rounded-lg p-3 cursor-pointer hover:bg-white/20 transition-all duration-300"
+            style={card.position}
+>>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
             initial={{ opacity: 0, y: 20 }}
             animate={{ 
               opacity: 1, 
@@ -135,6 +140,10 @@ export function EarthGlobe() {
               y: -5,
               boxShadow: `0 10px 30px hsla(var(--${card.color}), 0.3)`
             }}
+<<<<<<< HEAD
+=======
+            className={`animate-float ${index === 0 ? '' : index === 1 ? 'animation-delay-1000' : 'animation-delay-2000'}`}
+>>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
           >
             <div className={`text-[hsl(var(--${card.color}))] text-sm font-semibold`}>
               {card.title}

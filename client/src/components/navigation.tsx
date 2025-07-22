@@ -37,11 +37,18 @@ export function Navigation() {
 
   return (
     <motion.nav
+<<<<<<< HEAD
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         scrolled ? 'glass-morphism-bright backdrop-blur-xl shadow-lg shadow-black/20' : 'bg-transparent'
+=======
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? 'glass-morphism backdrop-blur-xl' : 'bg-transparent'
+>>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,6 +56,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/">
             <motion.div 
+<<<<<<< HEAD
               className="flex items-center space-x-3 cursor-pointer group"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
@@ -60,6 +68,15 @@ export function Navigation() {
                 <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-[hsl(var(--eco-green))] to-[hsl(var(--neon-blue))] opacity-20 group-hover:opacity-40 transition-opacity duration-300 animate-pulse"></div>
               </div>
               <span className="text-xl font-bold gradient-text text-glow-subtle">DNS Planet</span>
+=======
+              className="flex items-center space-x-2 cursor-pointer group"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[hsl(var(--eco-green))] to-[hsl(var(--neon-blue))] flex items-center justify-center">
+                <Globe className="w-5 h-5 text-black" />
+              </div>
+              <span className="text-xl font-bold gradient-text">DNS Planet</span>
+>>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
             </motion.div>
           </Link>
 
@@ -69,6 +86,7 @@ export function Navigation() {
               <motion.button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
+<<<<<<< HEAD
                 className="relative text-gray-300 hover:text-[hsl(var(--eco-green))] transition-all duration-300 font-medium px-3 py-2 rounded-lg hover:bg-white/5"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
@@ -79,6 +97,13 @@ export function Navigation() {
                   whileHover={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
                 />
+=======
+                className="text-gray-300 hover:text-[hsl(var(--eco-green))] transition-colors duration-300 font-medium"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {item.label}
+>>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
               </motion.button>
             ))}
           </div>

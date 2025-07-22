@@ -48,7 +48,11 @@ export function AIAgentsPanel() {
     );
   }
 
+<<<<<<< HEAD
   const agents = (data as any)?.agents || [];
+=======
+  const agents = data?.agents || [];
+>>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
 
   return (
     <section id="ai-agents" className="py-20 bg-gradient-to-b from-[hsl(var(--space-black))] to-[hsl(var(--space-dark))]">
@@ -69,22 +73,36 @@ export function AIAgentsPanel() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
           {agents.map((agent: any, index: number) => {
+=======
+          {agents.map((agent, index) => {
+>>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
             const Icon = agentIcons[agent.id as keyof typeof agentIcons];
             const color = agentColors[agent.id as keyof typeof agentColors];
             
             return (
               <motion.div
                 key={agent.id}
+<<<<<<< HEAD
                 className="group glass-morphism-bright rounded-2xl p-6 card-hover-effect cursor-pointer shimmer-border"
+=======
+                className="group glass-morphism rounded-2xl p-6 hover:bg-white/10 transition-all duration-500 cursor-pointer"
+>>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ 
+<<<<<<< HEAD
                   scale: 1.03,
                   y: -8,
                   rotateY: 5
+=======
+                  scale: 1.02,
+                  y: -5,
+                  boxShadow: `0 20px 40px hsla(var(--${color}), 0.3)`
+>>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
                 }}
               >
                 <div className="flex items-center mb-4">

@@ -25,6 +25,7 @@ export default function Home() {
       <Navigation />
       
       {/* Hero Section */}
+<<<<<<< HEAD
       <section id="hero" className="min-h-screen hero-bg flex items-center justify-center relative overflow-hidden neural-pattern">
         <div className="absolute inset-0 opacity-40">
           <div className="absolute top-10 left-10 w-3 h-3 bg-[hsl(var(--eco-green))] rounded-full data-node glow-eco"></div>
@@ -136,6 +137,59 @@ export default function Home() {
           >
             <EarthGlobe />
           </motion.div>
+=======
+      <section id="hero" className="min-h-screen flex items-center justify-center relative hero-bg">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-10 w-2 h-2 bg-[hsl(var(--eco-green))] rounded-full data-node"></div>
+          <div className="absolute top-40 right-20 w-1 h-1 bg-[hsl(var(--neon-blue))] rounded-full data-node" style={{animationDelay: '0.5s'}}></div>
+          <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-[hsl(var(--infrared-orange))] rounded-full data-node" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-[hsl(var(--eco-green))] rounded-full data-node" style={{animationDelay: '1.5s'}}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            
+            {/* Left Content */}
+            <motion.div 
+              className="text-center lg:text-left"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                <span className="gradient-text">Digital Nervous System</span>
+                <br />
+                <span className="text-white">of the Planet</span>
+              </h1>
+              
+              <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-2xl">
+                Real-time AI-powered platform for global conservation, monitoring Earth's vital signs through advanced neural networks
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button 
+                  onClick={() => scrollToSection('#public-layer')}
+                  className="px-8 py-4 bg-gradient-to-r from-[hsl(var(--eco-green))] to-[hsl(var(--neon-blue))] text-black font-semibold text-lg rounded-xl hover:shadow-xl hover:shadow-[hsl(var(--eco-green))]/25 transition-all duration-300 transform hover:scale-105"
+                >
+                  <Search className="mr-2" size={20} />
+                  Explore Public Layer
+                </Button>
+                <Button 
+                  variant="outline"
+                  onClick={() => scrollToSection('#research')}
+                  className="px-8 py-4 glass-morphism font-semibold text-lg rounded-xl hover:bg-white/10 transition-all duration-300 border border-[hsl(var(--eco-green))]/30 hover:border-[hsl(var(--eco-green))]/60 text-white"
+                >
+                  <Globe className="mr-2" size={20} />
+                  Enter Research Portal
+                </Button>
+              </div>
+            </motion.div>
+
+            {/* Right Content - Earth Globe */}
+            <EarthGlobe />
+          </div>
+>>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
         </div>
       </section>
 

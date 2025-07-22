@@ -51,9 +51,15 @@ export function Dashboard() {
     );
   }
 
+<<<<<<< HEAD
   const stats = (data as any)?.stats || {};
   const alerts = (alertsData.data as any)?.alerts || [];
   const recentSensorData = (sensorData as any)?.data || [];
+=======
+  const stats = data?.stats || {};
+  const alerts = alertsData?.alerts || [];
+  const recentSensorData = sensorData?.data || [];
+>>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
 
   // Mock chart data for temperature trends
   const temperatureData = [
@@ -275,7 +281,11 @@ export function Dashboard() {
               </h3>
               
               <div className="space-y-4">
+<<<<<<< HEAD
                 {alerts.slice(0, 3).map((alert: any, index: number) => (
+=======
+                {alerts.slice(0, 3).map((alert, index) => (
+>>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
                   <motion.div
                     key={alert.id}
                     className={`bg-[hsl(var(--${alert.severity === 'high' || alert.severity === 'critical' ? 'infrared-orange' : 'neon-blue'})]/10 border border-[hsl(var(--${alert.severity === 'high' || alert.severity === 'critical' ? 'infrared-orange' : 'neon-blue'})]/30 rounded-lg p-4`}

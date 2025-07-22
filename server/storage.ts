@@ -123,7 +123,10 @@ export class MemStorage implements IStorage {
       ...insertUser,
       id: this.currentUserId++,
       role: "user",
+<<<<<<< HEAD
       institution: insertUser.institution ?? null,
+=======
+>>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
       isResearcher: false,
       createdAt: new Date(),
     };
@@ -145,7 +148,10 @@ export class MemStorage implements IStorage {
       id: this.currentProjectId++,
       status: "active",
       participants: 0,
+<<<<<<< HEAD
       leadResearcherId: projectData.leadResearcherId ?? null,
+=======
+>>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
       data: null,
       createdAt: new Date(),
     };
