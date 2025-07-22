@@ -51,21 +51,9 @@ export function Dashboard() {
     );
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const stats = (data as any)?.stats || {};
-  const alerts = (alertsData.data as any)?.alerts || [];
+  const alerts = (alertsData as any)?.alerts || [];
   const recentSensorData = (sensorData as any)?.data || [];
-=======
-  const stats = data?.stats || {};
-  const alerts = alertsData?.alerts || [];
-  const recentSensorData = sensorData?.data || [];
->>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
-=======
-  const stats = (data as any)?.stats || {};
-  const alerts = (alertsData.data as any)?.alerts || [];
-  const recentSensorData = (sensorData as any)?.data || [];
->>>>>>> 445ae4d (Refine visual elements and styles across various website components)
 
   // Mock chart data for temperature trends
   const temperatureData = [
@@ -126,7 +114,7 @@ export function Dashboard() {
                   {(stats.speciesMonitored / 1000000).toFixed(1)}M
                 </div>
                 <div className="text-sm text-gray-300">Species Monitored</div>
-                <div className="text-xs text-[hsl(var(--eco-green))] mt-1">↑ 12% this month</div>
+                <div className="text-xs text-[hsl(var(--eco-green))] mt-1"> 191 12% this month</div>
               </motion.div>
               
               <motion.div 
@@ -137,7 +125,7 @@ export function Dashboard() {
                   {stats.activeAlerts || 0}
                 </div>
                 <div className="text-sm text-gray-300">Active Alerts</div>
-                <div className="text-xs text-[hsl(var(--infrared-orange))] mt-1">↑ 3 today</div>
+                <div className="text-xs text-[hsl(var(--infrared-orange))] mt-1"> 191 3 today</div>
               </motion.div>
               
               <motion.div 
@@ -287,15 +275,7 @@ export function Dashboard() {
               </h3>
               
               <div className="space-y-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
                 {alerts.slice(0, 3).map((alert: any, index: number) => (
-=======
-                {alerts.slice(0, 3).map((alert, index) => (
->>>>>>> 5aa2486 (Rebuild the conservation platform with space-inspired UI/UX)
-=======
-                {alerts.slice(0, 3).map((alert: any, index: number) => (
->>>>>>> 445ae4d (Refine visual elements and styles across various website components)
                   <motion.div
                     key={alert.id}
                     className={`bg-[hsl(var(--${alert.severity === 'high' || alert.severity === 'critical' ? 'infrared-orange' : 'neon-blue'})]/10 border border-[hsl(var(--${alert.severity === 'high' || alert.severity === 'critical' ? 'infrared-orange' : 'neon-blue'})]/30 rounded-lg p-4`}
@@ -386,7 +366,7 @@ export function Dashboard() {
               </h3>
               
               <div className="space-y-3 max-h-48 overflow-y-auto">
-                {recentSensorData.slice(0, 5).map((data, index) => (
+                {recentSensorData.slice(0, 5).map((data: any, index: number) => (
                   <motion.div
                     key={data.id}
                     className="flex items-center justify-between py-2 border-b border-gray-700/50 last:border-b-0"
