@@ -1,29 +1,40 @@
-import { Switch, Route } from "wouter";
-import { queryClient } from "./lib/queryClient";
-import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Home from "@/pages/home";
-import NotFound from "@/pages/not-found";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Router, Route, Switch } from "wouter";
+import Navigation from "@/components/Navigation";
+import Home from "./pages/Home";
+import Wildlife from "./pages/Wildlife";
+import Marine from "./pages/Marine";
+import Climate from "./pages/Climate";
+import Dashboard from "./pages/Dashboard";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
-function Router() {
-  return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route component={NotFound} />
-    </Switch>
-  );
-}
+const queryClient = new QueryClient();
 
-function App() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Router />
-      </TooltipProvider>
-    </QueryClientProvider>
-  );
-}
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <Router>
+        <div className="min-h-screen bg-background">
+          <Navigation />
+          <Switch>
+            <Route path="/" component={Home} />
+            <Route path="/wildlife" component={Wildlife} />
+            <Route path="/marine" component={Marine} />
+            <Route path="/climate" component={Climate} />
+            <Route path="/dashboard" component={Dashboard} />
+            <Route path="/contact" component={Contact} />
+            <Route component={NotFound} />
+          </Switch>
+        </div>
+      </Router>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
 
 export default App;
